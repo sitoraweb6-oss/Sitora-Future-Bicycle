@@ -12,6 +12,7 @@ import FaqSection from "./components/FaqSection";
 import PricingSection from "./components/PricingSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import CoreAttribution from "./components/CoreAttribution";
 import { X, Trash2, ShoppingCart, Zap, CheckCircle } from "lucide-react";
 
 export default function App() {
@@ -201,6 +202,9 @@ export default function App() {
 
       {/* Footer copyright grids */}
       <Footer />
+
+      {/* Reusable Core Floating Attribution */}
+      <CoreAttribution variant="floating" />
 
       {/* Slide-out Pre-Order Reservation Drawer */}
       <AnimatePresence>

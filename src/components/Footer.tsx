@@ -1,4 +1,5 @@
 import { Cpu, ArrowUp } from "lucide-react";
+import CoreAttribution from "./CoreAttribution";
 
 export default function Footer() {
   const handleScrollTop = () => {
@@ -20,8 +21,9 @@ export default function Footer() {
         </div>
 
         {/* Legal copyrights */}
-        <div className="text-center md:text-left text-[11px] text-gray-500 font-light font-sans max-w-sm">
+        <div className="text-center md:text-left text-[11px] text-gray-500 font-light font-sans max-w-sm flex flex-col gap-1.5">
           <span>© {new Date().getFullYear()} Future Bicycle Showroom. All engineering patents configured under aerospace standards. Built via AI Studio.</span>
+          <CoreAttribution variant="footer" />
         </div>
 
         {/* Back to top selector trigger */}
