@@ -1,0 +1,6 @@
+{
+  "name": "Future Bicycle Showcase",
+  "description": "A premium futuristic product showcase website highlighting local premium future urban bicycle variants with high-contrast, interactive features.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

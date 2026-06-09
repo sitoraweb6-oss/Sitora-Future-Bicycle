@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-slate-950: #020617;
+  --color-navy-950: #020617;
+  --color-future-blue: #60a5fa;
+  --color-cyber-cyan: #22d3ee;
+  --color-copper-accent: #fb923c;
+}
+
+/* Base resets & scrollbars inside the Clean Minimalism theme */
+html, body {
+  background-color: #020617;
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar matching Stockholm Minimalism */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Clean Minimalism Ambient Glow */
+.radial-glow {
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, rgba(2, 6, 23, 0) 70%);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.3);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 12px rgba(96, 165, 250, 0.3);
+}
+
+/* Glassmorphism panel styling (Minimal clean outlines, pure backdrop-blur-md) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-heavy {
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Animated scanning lasers - extremely subtle for minimal theme */
+@keyframes laser-sweep {
+  0% { transform: translateY(-100%); opacity: 0.05; }
+  50% { opacity: 0.3; }
+  100% { transform: translateY(100vh); opacity: 0.05; }
+}
+
+.laser-scanner {
+  animation: laser-sweep 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Rotate loops */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+.spin-slow-reverse {
+  animation: spin-slow 28s linear infinite reverse;
+}
