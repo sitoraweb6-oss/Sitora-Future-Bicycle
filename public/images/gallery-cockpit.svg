@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="cockpitGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="backGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#backGrad)"/>
+  
+  <!-- Subtle Grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    
+    <line x1="100" y1="0" x2="100" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="300" y1="0" x2="300" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="500" y1="0" x2="500" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+    <line x1="700" y1="0" x2="700" y2="450" />
+  </g>
+
+  <!-- Cockpit Radial Glow -->
+  <circle cx="400" cy="225" r="230" fill="url(#cockpitGlow)" />
+
+  <!-- Handlebar / Cockpit Stem graphic -->
+  <g stroke="#3b82f6" stroke-width="2.5" fill="none" stroke-linejoin="round">
+    <!-- Symmetric Handlebars -->
+    <path d="M 200,160 C 260,150 320,170 370,210 L 400,240 L 430,210 C 480,170 540,150 600,160" stroke="#ffffff" stroke-opacity="0.8" stroke-width="5" />
+    
+    <!-- Symmetric Grips -->
+    <path d="M 170,165 L 210,158" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" />
+    <path d="M 630,165 L 590,158" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" />
+
+    <!-- Stem monocoque stack -->
+    <path d="M 400,240 L 400,340" stroke="#22d3ee" stroke-width="5" />
+    <path d="M 380,340 H 420" stroke="#22d3ee" stroke-width="3" />
+    <rect x="382" y="250" width="36" height="50" rx="4" stroke="#ffffff" stroke-opacity="0.2" fill="#020617" />
+    
+    <!-- Concentric radar circles for aerodynamic telemetry -->
+    <circle cx="400" cy="240" r="30" stroke="#2a4365" stroke-dasharray="4 4" stroke-width="1.5" />
+    <circle cx="400" cy="240" r="60" stroke="#2f855a" stroke-opacity="0.4" stroke-width="1" />
+  </g>
+
+  <!-- Readouts, Text overlays -->
+  <g fill="#3b82f6" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">
+    <!-- Callout Line for Drag factor -->
+    <line x1="320" y1="170" x2="220" y2="100" stroke="#22d3ee" stroke-width="1.5" />
+    <circle cx="320" cy="170" r="3" fill="#22d3ee" />
+    <text x="50" y="86" fill="#22d3ee" font-weight="bold">INTEGRATED STEM SHUDS</text>
+    <text x="50" y="102" fill="#ffffff" fill-opacity="0.6" font-size="8">DRAG COEFFICIENT: 0.04 CD</text>
+    <text x="50" y="114" fill="#ffffff" fill-opacity="0.6" font-size="8">CABLE VECTOR: 100% INTERNAL</text>
+
+    <!-- UI Overlay elements -->
+    <rect x="520" y="350" width="260" height="70" fill="#020612" fill-opacity="0.85" rx="6" stroke="#ffffff" stroke-opacity="0.1" />
+    <text x="535" y="370" font-size="8" fill="#ffffff" fill-opacity="0.4">STEERING STATS</text>
+    <text x="535" y="386" font-size="11" fill="#ffffff" font-weight="bold">MONOCOQUE HELM-STEM</text>
+    <text x="535" y="402" font-size="9" fill="#3b82f6">INTEGRATED OLED BAR CONTROLLER</text>
+
+    <!-- Watermark context -->
+    <text x="30" y="420" font-size="8" fill="#ffffff" fill-opacity="0.3">SYSTEM: COCKPIT-CONTROL-v9.2 // CONCEALED FLUID BRAKINGS</text>
+  </g>
+</svg>

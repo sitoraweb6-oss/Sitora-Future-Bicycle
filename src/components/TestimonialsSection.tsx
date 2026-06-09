@@ -16,7 +16,7 @@ export default function TestimonialsSection() {
       id: 1,
       name: "Marcus Vance",
       role: "Lead Concept Dev, AeroCycles Ltd",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150",
+      avatar: "/images/avatar-1.svg",
       quote: "We cross-analyzed the Cruxon Model A in our wind chamber against leading carbon track configurations. The composite solid disc wheel geometry shaved nearly 18 watts off drag calculations at 45km/h. A masterpiece of structural fluid dynamics.",
       metric: "WIND CHAMBER: -18W SAVED",
       rating: 5,
@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
       id: 2,
       name: "Elena Rostova",
       role: "Grand Prix Velodrome Sprint Champion",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150",
+      avatar: "/images/avatar-2.svg",
       quote: "The instant acceleration from the Magneto Rear-Hub motor is astonishing. Under complete full-load sprints, there's absolutely none of the frame flex you usually feel on light carbon. Biometric ignition triggers seamlessly.",
       metric: "PROPULSION SPEED: 85 KM/H MAX",
       rating: 5,
@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
       id: 3,
       name: "Devon Sinclair",
       role: "Futurist & Urban Commuter",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150",
+      avatar: "/images/avatar-3.svg",
       quote: "My FTR S-Class commuter gets comments everywhere on my morning ride. The hollow hubless rims are an absolute design triumph—and they glide seamlessly. The interactive active cyan light pulse makes night rides incredibly safe.",
       metric: "LOGGED METROPOLIS: 750+ KM",
       rating: 5,
@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
                 {/* 5 Star Rating group */}
                 <div className="flex gap-1 mb-5">
                   {[...Array(test.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-sky-500 text-sky-500 stroke-none" />
+                    <Star key={i} className="w-3.5 h-3.5 fill-blue-400 text-blue-400 stroke-none" />
                   ))}
                 </div>
 

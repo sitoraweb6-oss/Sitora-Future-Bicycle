@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="batteryGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="solidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#solidGrad)"/>
+  
+  <!-- Light Matrix Grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    
+    <line x1="100" y1="0" x2="100" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="300" y1="0" x2="300" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="500" y1="0" x2="500" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+    <line x1="700" y1="0" x2="700" y2="450" />
+  </g>
+
+  <!-- Thermal Glow -->
+  <circle cx="400" cy="225" r="240" fill="url(#batteryGlow)" />
+
+  <!-- Battery Pack Cells Layout -->
+  <g stroke="#fb923c" stroke-width="2" fill="none" stroke-linejoin="round">
+    <!-- Main outer capsule enclosure -->
+    <rect x="250" y="160" width="300" height="130" rx="15" stroke="#ffffff" stroke-opacity="0.8" stroke-width="4" />
+    
+    <!-- Left anode/cathode contacts -->
+    <rect x="220" y="205" width="30" height="40" rx="4" fill="#fb923c" stroke="none" />
+    <rect x="550" y="205" width="10" height="40" rx="2" fill="#3b82f6" stroke="none" />
+    
+    <!-- Segmented internal stack separators -->
+    <line x1="310" y1="160" x2="310" y2="290" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" />
+    <line x1="370" y1="160" x2="370" y2="290" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" />
+    <line x1="430" y1="160" x2="430" y2="290" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" />
+    <line x1="490" y1="160" x2="490" y2="290" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" />
+
+    <!-- Solid graphene cell nodes blocks -->
+    <rect x="265" y="175" width="30" height="100" rx="4" fill="#fb923c" fill-opacity="0.15" stroke-dasharray="2 2" stroke-width="1.5" />
+    <rect x="325" y="175" width="30" height="100" rx="4" fill="#fb923c" fill-opacity="0.15" stroke-dasharray="2 2" stroke-width="1.5" />
+    <rect x="385" y="175" width="30" height="100" rx="4" fill="#fb923c" fill-opacity="0.15" stroke-dasharray="2 2" stroke-width="1.5" />
+    <rect x="445" y="175" width="30" height="100" rx="4" fill="#fb923c" fill-opacity="0.15" stroke-dasharray="2 2" stroke-width="1.5" />
+    <rect x="505" y="175" width="30" height="100" rx="4" fill="#fb923c" fill-opacity="0.15" stroke-dasharray="2 2" stroke-width="1.5" />
+
+    <!-- Wave form power currents -->
+    <path d="M 260,225 Q 280,215 300,225 T 340,225 T 380,225 T 420,225 T 460,225 T 500,225 T 540,225" stroke="#fb7185" stroke-width="2" />
+  </g>
+
+  <!-- Labels -->
+  <g fill="#fb923c" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">
+    <!-- Callout line -->
+    <circle cx="385" cy="200" r="3" fill="#fb923c" />
+    <line x1="385" y1="200" x2="450" y2="100" stroke="#fb923c" stroke-width="1.5" />
+    <text x="460" y="96" fill="#fb923c" font-weight="bold">GRAPHENE COMPACT CELL MATRIX</text>
+    <text x="460" y="112" fill="#ffffff" fill-opacity="0.6" font-size="8">ENERGY CELL CAPACITY: 780 WH</text>
+    <text x="460" y="124" fill="#ffffff" fill-opacity="0.6" font-size="8">SOLID ELECTROLYTE: ZERO LEAKAGE</text>
+
+    <!-- Side card info -->
+    <rect x="30" y="20" width="260" height="60" fill="#020612" fill-opacity="0.85" rx="6" stroke="#ffffff" stroke-opacity="0.1" />
+    <text x="45" y="38" font-size="8" fill="#ffffff" fill-opacity="0.4">THERMAL COUPLING</text>
+    <text x="45" y="52" font-size="11" fill="#ffffff" font-weight="bold">ENERGY-CELL CONTROL</text>
+    <text x="45" y="66" font-size="9" fill="#fb923c">TEMPERATURE THRESHOLD LOCKED</text>
+
+    <!-- Watermark context footer -->
+    <text x="30" y="420" font-size="8" fill="#ffffff" fill-opacity="0.3">CELL: ENERGY-CELL-v9.2 // EXPANSION RATE 0.01% MAX</text>
+  </g>
+</svg>
